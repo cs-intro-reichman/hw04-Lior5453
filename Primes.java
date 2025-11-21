@@ -30,7 +30,10 @@ public class Primes
         while (i <= numPrimesToCheck)
         {
             if (isPrime(i))
+            {
                 count++;
+                System.out.println(i);
+            }
                 
             i++;
         }
@@ -41,6 +44,7 @@ public class Primes
     // This function euns the print messages + runs the primes check and all caculations
     public static void printFinishAnswers(int numPrimesToCheck)
     {
+        System.out.println("Prime numbers up to " + numPrimesToCheck + ":");
         int primesCount = checkPrimes(numPrimesToCheck);
         int precentage = (int)((double)primesCount / (double)numPrimesToCheck * 100);
 
