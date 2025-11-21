@@ -1,6 +1,9 @@
-public class KeywordsDetector {
-    public static void main(String[] args) {
-        String[] sentences = {
+public class KeywordsDetector 
+{
+    public static void main(String[] args) 
+    {
+        String[] sentences = 
+        {
             "Our product will transform the market",
             "Programming is both painful and engaging",
             "This has nothing to do with machine learning",
@@ -20,7 +23,16 @@ public class KeywordsDetector {
 
     // Iterates through all the sentences.
     // If a sentence contains one or more of the kewords, prints it.
-    public static void detectAndPrint(String[] sentences, String[] keywords) {
-        // Replace this comment with your code
+    public static void detectAndPrint(String[] sentences, String[] keywords) 
+    {
+        for (int i = 0; i < sentences.length; i++) // loop for each sentence
+        {
+            for (int j = 0; j < keywords.length; j++) // loop for each word
+            {
+                // if current sentence contains the current word
+                if (MyString.contains(MyString.lowerCase(sentences[i]), MyString.lowerCase(keywords[j])))
+                    System.out.println(sentences[i]);
+            }
+        }
     }
 }
